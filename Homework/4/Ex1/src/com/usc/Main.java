@@ -17,11 +17,17 @@ public class Main {
         map.put("name",name);
         map.put("totalAverage",String.valueOf(totalAverage));
         Collection<String> collection = map.values();
+        System.out.println("values is:");
         for(Object o : collection)
             System.out.println(o);
         /* or
+        Set<String> set = map.keySet();
+        System.out.println("keys is:");
+        for(Object o : set)
+            System.out.println(o);
         System.out.print("enter a key: ");
-        System.out.println(map.get(input.nextLine()));
+        System.out.println("value of key is: " + map.get(input.nextLine()));
          */
+
     }
 }
