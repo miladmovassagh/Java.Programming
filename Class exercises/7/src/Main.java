@@ -1,4 +1,4 @@
-package com.usc;
+import controller.UserAccountCont;
 
 import java.util.Scanner;
 

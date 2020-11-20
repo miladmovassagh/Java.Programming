@@ -1,4 +1,4 @@
-package com.usc;
+package model.entity;
 
 public class UserAccountEnti {
     private String name;
