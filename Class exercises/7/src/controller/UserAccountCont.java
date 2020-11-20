@@ -7,7 +7,13 @@ import java.util.*;
 
 public class UserAccountCont {
 
-    public UserAccountCont() {
+    private static UserAccountCont userAccountCont = new UserAccountCont();
+
+    public static UserAccountCont getInstance() {
+        return userAccountCont;
+    }
+
+    private UserAccountCont() {
 
     }
 
