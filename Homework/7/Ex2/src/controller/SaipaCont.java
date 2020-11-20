@@ -11,6 +11,11 @@ public class SaipaCont {
 
     }
 
+//    public void insert(int carId, String model, String color, int maxSpeed, int constructionYear, String price) throws Exception {
+//        SaipaServ.getInstance().save(new SaipaEnti().setCarId(carId).setModel(model).setColor(color).setMaxSpeed(maxSpeed).setConstructionYear(constructionYear).setPrice(price));
+//        System.out.println ("sign up successfully.");
+//    }
+
     public void select() throws Exception {
         int i = 1;
         List<SaipaEnti> saipaList = SaipaServ.getInstance().report();

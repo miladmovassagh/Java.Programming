@@ -17,6 +17,13 @@ public class SaipaServ {
 
     }
 
+//    public void save (SaipaEnti saipaEnti) throws Exception {
+//        try (SaipaRepo saipaRepo = new SaipaRepo()) {
+//            saipaRepo.insert(saipaEnti);
+//            saipaRepo.commit ();
+//        }
+//    }
+
     public List<SaipaEnti> report() throws Exception {
         List<SaipaEnti> saipaEntis;
         try(SaipaRepo saipaRepo = new SaipaRepo()) {

@@ -15,6 +15,17 @@ public class SaipaRepo implements AutoCloseable {
         connection.setAutoCommit (false);
     }
 
+//    public void insert(SaipaEnti saipaEnti) throws Exception {
+//        preparedStatement = connection.prepareStatement ("insert into saipacars(id,model,color,maxspeed,year,price) values (?,?,?,?,?,?)");
+//        preparedStatement.setInt(1,saipaEnti.getConstructionYear());
+//        preparedStatement.setString(2, saipaEnti.getModel());
+//        preparedStatement.setString(3,saipaEnti.getColor());
+//        preparedStatement.setInt(4,saipaEnti.getMaxSpeed());
+//        preparedStatement.setInt(5,saipaEnti.getConstructionYear());
+//        preparedStatement.setString(6,saipaEnti.getPrice());
+//        preparedStatement.executeUpdate();
+//    }
+
     public List<SaipaEnti> select() throws Exception {
         preparedStatement = connection.prepareStatement ("select * from saipacars");
         ResultSet resultSet = preparedStatement.executeQuery ();
