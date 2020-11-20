@@ -7,7 +7,13 @@ import java.util.*;
 
 public class SaipaCont {
 
-    public SaipaCont() {
+    private static SaipaCont saipaCont = new SaipaCont();
+
+    public static SaipaCont getInstance() {
+        return saipaCont;
+    }
+
+    private SaipaCont() {
 
     }
 

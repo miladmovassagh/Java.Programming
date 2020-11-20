@@ -6,6 +6,17 @@ import model.service.CarSellServ;
 import java.util.List;
 
 public class CarSellCont {
+
+    private static CarSellCont carSellCont = new CarSellCont();
+
+    public static CarSellCont getInstance() {
+        return carSellCont;
+    }
+
+    private CarSellCont() {
+
+    }
+
     public void insert(int carId, String username) throws Exception {
         CarSellServ.getInstance().save(new CarSellEnti().setCarId(carId).setUsername(username));
         System.out.println ("buy successfully.");

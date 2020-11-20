@@ -9,7 +9,13 @@ public class UsersCont {
 
     Scanner input = new Scanner(System.in);
 
-    public UsersCont() {
+    private static UsersCont usersCont = new UsersCont();
+
+    public static UsersCont getInstance() {
+        return usersCont;
+    }
+
+    private UsersCont() {
 
     }
 
@@ -29,7 +35,6 @@ public class UsersCont {
         }
         if(check) {
             System.out.println("login successfully.");
-            SaipaCont saipaCont = new SaipaCont();
             System.out.println("1: show specifications of cars");
             System.out.println("2: buy a car");
             System.out.println("3: car buying guid");
@@ -39,14 +44,13 @@ public class UsersCont {
             for (; choice != 4; ) {
                 switch (choice) {
                     case 1:
-                        saipaCont.select();
+                        SaipaCont.getInstance().select();
                         break;
                     case 2:
                         System.out.print("enter the id of car you want: ");
                         int carId = Integer.parseInt(input.nextLine());
-                        if (saipaCont.select(carId)) {
-                            CarSellCont carSellCont = new CarSellCont();
-                            carSellCont.insert(carId, username);
+                        if (SaipaCont.getInstance().select(carId)) {
+                            CarSellCont.getInstance().insert(carId, username);
                         }
                         else
                             System.out.println("invalid car id.");
