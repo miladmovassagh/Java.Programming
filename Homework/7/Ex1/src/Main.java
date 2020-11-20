@@ -19,9 +19,8 @@ public class Main {
                 String password1 = input.nextLine();
                 System.out.print("enter the email: ");
                 String email = input.nextLine();
-                UsersCont usersCont = new UsersCont();
                 try {
-                    usersCont.insert(name, username1, password1, email, 0, 0);
+                    UsersCont.getInstance().insert(name, username1, password1, email, 0, 0);
                 } catch (Exception e) {
                     System.out.println ("Fail to sign up!!");
                     e.printStackTrace();
@@ -32,9 +31,8 @@ public class Main {
                 String username2 = input.nextLine();
                 System.out.print("enter the password: ");
                 String password2 = input.nextLine();
-                UsersCont usersCont1 = new UsersCont();
                 try {
-                    usersCont1.select(username2, password2);
+                    UsersCont.getInstance().select(username2, password2);
                 } catch (Exception e) {
                     System.out.println("Fail to login!!");
                     e.printStackTrace();

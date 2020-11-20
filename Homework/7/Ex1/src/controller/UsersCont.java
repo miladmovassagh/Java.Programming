@@ -9,6 +9,16 @@ public class UsersCont {
 
     Scanner input = new Scanner(System.in);
 
+    private static UsersCont usersCont = new UsersCont();
+
+    public static UsersCont getInstance() {
+        return usersCont;
+    }
+
+    private UsersCont() {
+
+    }
+
     public void insert(String name, String username, String password, String email, long bill, int internetPackage) throws Exception {
         UsersServ.getInstance().save(new UsersEnti().setName(name).setUsername(username).setPassword(password).setEmail(email).setBill(bill).setInternetPackage(internetPackage));
         System.out.println ("sign up successfully.");
