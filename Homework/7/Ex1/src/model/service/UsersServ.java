@@ -1,4 +1,7 @@
-package com.usc;
+package model.service;
+
+import model.entity.UsersEnti;
+import model.repository.UsersRepo;
 
 import java.util.*;
 

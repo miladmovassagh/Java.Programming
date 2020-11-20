@@ -1,4 +1,6 @@
-package com.usc;
+package model.repository;
+
+import model.entity.UsersEnti;
 
 import java.util.*;
 import java.sql.*;
