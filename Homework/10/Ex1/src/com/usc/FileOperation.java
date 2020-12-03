@@ -12,7 +12,7 @@ public class FileOperation extends Thread {
     public void readFile() {
         File file = new File("file.txt");
         try {
-            Thread.sleep(31000);
+            Thread.sleep(30000);
             FileReader fileReader = new FileReader(file);
             int ascii = fileReader.read();
             String content = "";
