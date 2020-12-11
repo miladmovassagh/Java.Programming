@@ -86,6 +86,7 @@ public class Main {
                         cardService.save(new Card().setFullName(fullName).setCardNumber(cardNumber3).setSecondPassword(secondPassword2).setBalance(balance));
                         System.out.println("register successfully");
                     }
+                    break;
                 default:
                     System.out.println("invalid choice number");
             }
