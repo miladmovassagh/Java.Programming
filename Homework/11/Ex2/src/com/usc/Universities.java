@@ -1,31 +1,48 @@
 package com.usc;
 
-import org.codehaus.jettison.json.JSONArray;
-import org.codehaus.jettison.json.JSONObject;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+
+@Path("/save")
 public class Universities {
+    @Path("/uni")
+    @GET
+    @Produces("text/plain")
+    public String uni()
+    {
+        System.out.println("save executed in server");
+        JSONObject jsonObject1 = new JSONObject();
+        jsonObject1.put("name","sharif");
+        jsonObject1.put("city","tehran");
 
-    public Universities() throws Exception {
-        JSONObject jsObject1 = new JSONObject();
-        jsObject1.put("name","amirkabir");
-        jsObject1.put("city","tehran");
-        JSONObject jsObject2 = new JSONObject();
-        jsObject2.put("name","ferdowsi");
-        jsObject2.put("city","mashhad");
-        JSONObject jsObject3 = new JSONObject();
-        jsObject3.put("name","sharif");
-        jsObject3.put("city","tehran");
-        JSONObject jsObject4 = new JSONObject();
-        jsObject4.put("name","kharazmi");
-        jsObject4.put("city","karaj");
-        JSONObject jsObject5 = new JSONObject();
-        jsObject5.put("name","khaje nasir");
-        jsObject5.put("city","tehran");
+        JSONObject jsonObject2 = new JSONObject();
+        jsonObject2.put("name","tehran");
+        jsonObject2.put("city","tehran");
+
+        JSONObject jsonObject3 = new JSONObject();
+        jsonObject3.put("name","ferdowsi");
+        jsonObject3.put("city","mashhad");
+
+        JSONObject jsonObject4 = new JSONObject();
+        jsonObject4.put("name","kharazmi");
+        jsonObject4.put("city","karaj");
+
+        JSONObject jsonObject5 = new JSONObject();
+        jsonObject5.put("name","amirkabir");
+        jsonObject5.put("city","tehran");
+
         JSONArray jsonArray = new JSONArray();
-        jsonArray.put(jsObject1);
-        jsonArray.put(jsObject2);
-        jsonArray.put(jsObject3);
-        jsonArray.put(jsObject4);
-        jsonArray.put(jsObject5);
+        jsonArray.add(jsonObject1);
+        jsonArray.add(jsonObject2);
+        jsonArray.add(jsonObject3);
+        jsonArray.add(jsonObject4);
+        jsonArray.add(jsonObject5);
+
+        return jsonArray.toJSONString();
     }
 }
